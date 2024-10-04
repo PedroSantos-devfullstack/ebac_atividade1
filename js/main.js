@@ -17,7 +17,7 @@ $('#cep').mask('00000-000', {
     placeholder: '012345-678'
 })
 
-$('section').validate({
+$('form#meuFormulario').validate({
     rules: {
         nome: {
             required: true
@@ -44,7 +44,7 @@ $('section').validate({
         console.log(form);
     },
     invalidHandler: function (evento, validator) {
-        let camposIncorretos = validator.numberOfIvalids();
+        let camposIncorretos = validator.numberOfInvalids();
         if (camposIncorretos) {
             alert("Por favor, preencha os campos para prosseguir com a compra!");
         }
